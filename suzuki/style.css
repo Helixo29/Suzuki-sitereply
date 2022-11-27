@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+:root{
+    --black: #2f2f2f;
+    --white: #fff;
+    --red: #f83038;
+}
+
+.main{
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#1c1c1c,#323232);
+    padding: 30px 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.main::before{
+    content: 'Adventure';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16vw;
+    font-weight: 700;
+    color: rgba(255,255,255,0.05);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    max-width: 80px;
+}
+
+.navigation{
+    display: flex;
+}
+
+.navigation li{
+    list-style: none;
+}
+
+.navigation li a{
+    position: relative;
+    color: var(--white);
+    margin-left: 40px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.navigation li a:hover{
+    color: var(--red);
+}
+
+.content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.content h2{
+    font-size: 5em;
+    font-weight: 300;
+    color: var(--white);
+    text-align: center;
+}
+
+.content h2 span{
+    font-weight: 700;
+    color: var(--white);
+    transition: 0.25s;
+}
+
+.content h2 span:hover{
+    color: var(--red);
+    letter-spacing: 4px;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    padding: 16px 36px;
+    margin-top: 20px;
+    border-radius: 50px;
+    transition: 0.25s;
+    font-size: 1.25em;
+}
+
+.btn:hover{
+    color: var(--white);
+    background: #000000;
+    border-radius: 20px;
+    letter-spacing: 5px;
+}
+
+.bike{
+    max-width: 80%;
+    transition: 0.50s;
+}
+
+
+.dots{
+    display: flex;
+}
+
+.dots .dot{
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.05);    
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;   
+    transition: 0.25s;
+}
+
+.dots .dot:hover{
+    background: var(--white);
+}
+
+.dots .dot.active{
+    background: var(--white);
+}
+
+.dots .dot.active:hover{
+    background: var(--red);
+}
+
